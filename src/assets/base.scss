@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ionic Variables and Theming. For more info, please see:
+http://ionicframework.com/docs/theming/ */
+
+/** Ionic CSS Variables **/
+:root {
+    /** primary **/
+    --ion-color-primary: theme('colors.primary.500');
+    --ion-color-primary-rgb: 74, 123, 119; // rgb of colors.primary.500
+    --ion-color-primary-contrast: theme('colors.primary.500-contrast');
+    --ion-color-primary-contrast-rgb: 255, 255, 255; // rgb of colors.primary.500-contrast
+    --ion-color-primary-shade: theme('colors.primary.600');
+    --ion-color-primary-tint: theme('colors.primary.400');
+  
+    /** secondary **/
+    --ion-color-secondary: theme('colors.secondary.500');
+    --ion-color-secondary-rgb: 20, 24, 43; // rgb of colors.secondary.500
+    --ion-color-secondary-contrast: theme('colors.secondary.500-contrast');
+    --ion-color-secondary-contrast-rgb: 255, 255, 255; // rgb of colors.secondary.500-contrast
+    --ion-color-secondary-shade: theme('colors.secondary.600');
+    --ion-color-secondary-tint: theme('colors.secondary.400');
+  
+    /** success **/
+    --ion-color-success: theme('colors.success.500');
+    --ion-color-success-rgb: 46, 132, 74, 1; // rgb of colors.success.500
+    --ion-color-success-contrast: theme('colors.success.500-contrast');
+    --ion-color-success-contrast-rgb: 255, 255, 255; // rgb of colors.success.500-contrast
+    --ion-color-success-shade: theme('colors.success.600');
+    --ion-color-success-tint: theme('colors.success.400');
+  
+    /** warning **/
+    --ion-color-warning: theme('colors.warning.500');
+    --ion-color-warning-rgb: 236, 169, 53; // rgb of colors.warning.500
+    --ion-color-warning-contrast: theme('colors.warning.500-contrast');
+    --ion-color-warning-contrast-rgb: 5, 22, 27; // rgb of colors.warning.500-contrast
+    --ion-color-warning-shade: theme('colors.warning.600');
+    --ion-color-warning-tint: theme('colors.warning.400');
+  
+    /** danger **/
+    --ion-color-danger: theme('colors.danger.500');
+    --ion-color-danger-rgb: 207, 0, 0; // rgb of colors.danger.500
+    --ion-color-danger-contrast: theme('colors.danger.500-contrast');
+    --ion-color-danger-contrast-rgb: 255, 255, 255; // rgb of colors.danger.500-contrast
+    --ion-color-danger-shade: theme('colors.danger.600');
+    --ion-color-danger-tint: theme('colors.danger.400');
+  
+    /** dark **/
+    --ion-color-dark: theme('colors.gray.800');
+    --ion-color-dark-rgb: 31, 41, 55;
+    --ion-color-dark-contrast: theme('colors.white');
+    --ion-color-dark-contrast-rgb: 255, 255, 255;
+    --ion-color-dark-shade: theme('colors.gray.900');
+    --ion-color-dark-tint: theme('colors.gray.700');
+  
+    /** medium **/
+    --ion-color-medium: theme('colors.gray.500');
+    --ion-color-medium-rgb: 112, 110, 107;
+    --ion-color-medium-contrast: theme('colors.white');
+    --ion-color-medium-contrast-rgb: 255, 255, 255;
+    --ion-color-medium-shade: theme('colors.gray.600');
+    --ion-color-medium-tint: theme('colors.gray.400');
+  
+    /** light **/
+    --ion-color-light: theme('colors.gray.100');
+    --ion-color-light-rgb: 221, 219, 218;
+    --ion-color-light-contrast: theme('colors.black');
+    --ion-color-light-contrast-rgb: 5, 22, 27;
+    --ion-color-light-shade: theme('colors.gray.200');
+    --ion-color-light-tint: theme('colors.gray.50');
+}
+
+/* latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('@/assets/fonts/Roboto/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('@/assets/fonts/Roboto/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6, p, div, span {
+    font-family: 'Roboto', system-ui, sans-serif;
+  }
+}
+
+.custom-alert .alert-wrapper {
+  .alert-message {
+    @apply text-secondary-500;
+  }
+
+  .alert-button {
+    @apply text-secondary-500;
+  }
+
+  .alert-head {
+    padding-top: 50px;
+    position: relative;
+  }
+} 
+
+ion-action-sheet.netive-action-sheet{
+  .action-sheet-title{
+      @apply text-5 font-bold text-black;
+  }
+  .action-sheet-sub-title{
+      @apply text-4 font-normal text-gray-600;
+  }
+  .action-sheet-group button{
+      @apply text-6 font-normal text-secondary-500;
+  }
+  .action-sheet-group.action-sheet-group-cancel button{
+      @apply text-6 font-bold text-secondary-500 rounded-xl;
+  }
+
+  ion-backdrop{
+      @apply bg-opacity-60 bg-black;
+  }
+}  

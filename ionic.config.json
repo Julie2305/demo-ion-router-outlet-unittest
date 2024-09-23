@@ -1,0 +1,10 @@
+{
+  "name": "New Ionic App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom",
+  "hooks": {
+    "build:before": "./before-build.js"
+  }
+}
